@@ -7,8 +7,9 @@ import jakarta.persistence.*;
 public class UsuarioComum {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private long Id;
     private String nome;
+    private double saldo = 1000.0;
 
     @Column(unique = true)
     private String email;
@@ -50,5 +51,13 @@ public class UsuarioComum {
 
     public void setCpf(int cpf) {
         this.cpf = cpf;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }

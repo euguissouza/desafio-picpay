@@ -5,12 +5,13 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "UsuarioPJ")
-public class UsuarioPJ {
+public class Lojista {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ID;
+    private long ID;
     private String nome;
+    private double saldo = 1000.0;
 
     @Column(unique = true)
     private String email;
@@ -19,8 +20,8 @@ public class UsuarioPJ {
     @Column(unique = true)
     private int cnpj;
 
-    public UsuarioPJ usuarioPJ(){
-        return usuarioPJ();
+    public Lojista lojista(){
+        return lojista();
     }
 
     public String getNome() {
@@ -53,5 +54,13 @@ public class UsuarioPJ {
 
     public void setCnpj(int cnpj) {
         this.cnpj = cnpj;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }

@@ -10,6 +10,7 @@ public class ApiPicpayApplication {
 		SpringApplication.run(ApiPicpayApplication.class, args);
 
 		System.out.println("Hello World!");
+
 	}
 
 
