@@ -1,5 +1,9 @@
 package com.desafio_pic_pay.api_picpay.DTO;
 
+
+import jakarta.persistence.Table;
+
+@Table(name = "Transferencias")
 public class RequestTransfer {
     private long reciverId;
     private long payerId;

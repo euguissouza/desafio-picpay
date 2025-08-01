@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Usuario")
-public class UsuarioComum {
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long Id;
@@ -18,8 +18,19 @@ public class UsuarioComum {
     @Column(unique = true)
     private int cpf;
 
-    public UsuarioComum usuarioComum(){
-        return usuarioComum();
+    @Enumerated(EnumType.STRING)
+    private UserType userType;
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
+    }
+
+    public Usuario usuario(){
+        return usuario();
     }
     public String getNome() {
         return nome;
