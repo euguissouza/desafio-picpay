@@ -26,6 +26,7 @@ public class TransferService {
         from.setSaldo(from.getSaldo() - request.getBalance());
         to.setSaldo(to.getSaldo() - request.getBalance());
 
+        System.out.println("Batata");
         usuarioRepository.save(from);
         usuarioRepository.save(to);
 
